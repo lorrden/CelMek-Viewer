@@ -1,0 +1,581 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC6FAF092975211C0099893C /* CelMek_ViewerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6FAF082975211C0099893C /* CelMek_ViewerApp.swift */; };
+		EC6FAF0B2975211C0099893C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6FAF0A2975211C0099893C /* ContentView.swift */; };
+		EC6FAF0D2975211D0099893C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC6FAF0C2975211D0099893C /* Assets.xcassets */; };
+		EC6FAF102975211D0099893C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC6FAF0F2975211D0099893C /* Preview Assets.xcassets */; };
+		EC6FAF1B2975211D0099893C /* CelMek_ViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6FAF1A2975211D0099893C /* CelMek_ViewerTests.swift */; };
+		EC6FAF252975211D0099893C /* CelMek_ViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6FAF242975211D0099893C /* CelMek_ViewerUITests.swift */; };
+		EC6FAF272975211D0099893C /* CelMek_ViewerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6FAF262975211D0099893C /* CelMek_ViewerUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EC6FAF172975211D0099893C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC6FAEFD2975211C0099893C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC6FAF042975211C0099893C;
+			remoteInfo = "CelMek Viewer";
+		};
+		EC6FAF212975211D0099893C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC6FAEFD2975211C0099893C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC6FAF042975211C0099893C;
+			remoteInfo = "CelMek Viewer";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EC6FAF052975211C0099893C /* CelMek Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CelMek Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC6FAF082975211C0099893C /* CelMek_ViewerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelMek_ViewerApp.swift; sourceTree = "<group>"; };
+		EC6FAF0A2975211C0099893C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EC6FAF0C2975211D0099893C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC6FAF0F2975211D0099893C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EC6FAF112975211D0099893C /* CelMek_Viewer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CelMek_Viewer.entitlements; sourceTree = "<group>"; };
+		EC6FAF162975211D0099893C /* CelMek ViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CelMek ViewerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC6FAF1A2975211D0099893C /* CelMek_ViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelMek_ViewerTests.swift; sourceTree = "<group>"; };
+		EC6FAF202975211D0099893C /* CelMek ViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CelMek ViewerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC6FAF242975211D0099893C /* CelMek_ViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelMek_ViewerUITests.swift; sourceTree = "<group>"; };
+		EC6FAF262975211D0099893C /* CelMek_ViewerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelMek_ViewerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC6FAF022975211C0099893C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC6FAF132975211D0099893C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC6FAF1D2975211D0099893C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EC6FAEFC2975211C0099893C = {
+			isa = PBXGroup;
+			children = (
+				EC6FAF072975211C0099893C /* CelMek Viewer */,
+				EC6FAF192975211D0099893C /* CelMek ViewerTests */,
+				EC6FAF232975211D0099893C /* CelMek ViewerUITests */,
+				EC6FAF062975211C0099893C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EC6FAF062975211C0099893C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC6FAF052975211C0099893C /* CelMek Viewer.app */,
+				EC6FAF162975211D0099893C /* CelMek ViewerTests.xctest */,
+				EC6FAF202975211D0099893C /* CelMek ViewerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC6FAF072975211C0099893C /* CelMek Viewer */ = {
+			isa = PBXGroup;
+			children = (
+				EC6FAF082975211C0099893C /* CelMek_ViewerApp.swift */,
+				EC6FAF0A2975211C0099893C /* ContentView.swift */,
+				EC6FAF0C2975211D0099893C /* Assets.xcassets */,
+				EC6FAF112975211D0099893C /* CelMek_Viewer.entitlements */,
+				EC6FAF0E2975211D0099893C /* Preview Content */,
+			);
+			path = "CelMek Viewer";
+			sourceTree = "<group>";
+		};
+		EC6FAF0E2975211D0099893C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EC6FAF0F2975211D0099893C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EC6FAF192975211D0099893C /* CelMek ViewerTests */ = {
+			isa = PBXGroup;
+			children = (
+				EC6FAF1A2975211D0099893C /* CelMek_ViewerTests.swift */,
+			);
+			path = "CelMek ViewerTests";
+			sourceTree = "<group>";
+		};
+		EC6FAF232975211D0099893C /* CelMek ViewerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EC6FAF242975211D0099893C /* CelMek_ViewerUITests.swift */,
+				EC6FAF262975211D0099893C /* CelMek_ViewerUITestsLaunchTests.swift */,
+			);
+			path = "CelMek ViewerUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC6FAF042975211C0099893C /* CelMek Viewer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC6FAF2A2975211D0099893C /* Build configuration list for PBXNativeTarget "CelMek Viewer" */;
+			buildPhases = (
+				EC6FAF012975211C0099893C /* Sources */,
+				EC6FAF022975211C0099893C /* Frameworks */,
+				EC6FAF032975211C0099893C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CelMek Viewer";
+			productName = "CelMek Viewer";
+			productReference = EC6FAF052975211C0099893C /* CelMek Viewer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EC6FAF152975211D0099893C /* CelMek ViewerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC6FAF2D2975211D0099893C /* Build configuration list for PBXNativeTarget "CelMek ViewerTests" */;
+			buildPhases = (
+				EC6FAF122975211D0099893C /* Sources */,
+				EC6FAF132975211D0099893C /* Frameworks */,
+				EC6FAF142975211D0099893C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC6FAF182975211D0099893C /* PBXTargetDependency */,
+			);
+			name = "CelMek ViewerTests";
+			productName = "CelMek ViewerTests";
+			productReference = EC6FAF162975211D0099893C /* CelMek ViewerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EC6FAF1F2975211D0099893C /* CelMek ViewerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC6FAF302975211D0099893C /* Build configuration list for PBXNativeTarget "CelMek ViewerUITests" */;
+			buildPhases = (
+				EC6FAF1C2975211D0099893C /* Sources */,
+				EC6FAF1D2975211D0099893C /* Frameworks */,
+				EC6FAF1E2975211D0099893C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC6FAF222975211D0099893C /* PBXTargetDependency */,
+			);
+			name = "CelMek ViewerUITests";
+			productName = "CelMek ViewerUITests";
+			productReference = EC6FAF202975211D0099893C /* CelMek ViewerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC6FAEFD2975211C0099893C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					EC6FAF042975211C0099893C = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					EC6FAF152975211D0099893C = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = EC6FAF042975211C0099893C;
+					};
+					EC6FAF1F2975211D0099893C = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = EC6FAF042975211C0099893C;
+					};
+				};
+			};
+			buildConfigurationList = EC6FAF002975211C0099893C /* Build configuration list for PBXProject "CelMek Viewer" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC6FAEFC2975211C0099893C;
+			productRefGroup = EC6FAF062975211C0099893C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC6FAF042975211C0099893C /* CelMek Viewer */,
+				EC6FAF152975211D0099893C /* CelMek ViewerTests */,
+				EC6FAF1F2975211D0099893C /* CelMek ViewerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC6FAF032975211C0099893C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC6FAF102975211D0099893C /* Preview Assets.xcassets in Resources */,
+				EC6FAF0D2975211D0099893C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC6FAF142975211D0099893C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC6FAF1E2975211D0099893C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC6FAF012975211C0099893C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC6FAF0B2975211C0099893C /* ContentView.swift in Sources */,
+				EC6FAF092975211C0099893C /* CelMek_ViewerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC6FAF122975211D0099893C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC6FAF1B2975211D0099893C /* CelMek_ViewerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC6FAF1C2975211D0099893C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC6FAF252975211D0099893C /* CelMek_ViewerUITests.swift in Sources */,
+				EC6FAF272975211D0099893C /* CelMek_ViewerUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EC6FAF182975211D0099893C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC6FAF042975211C0099893C /* CelMek Viewer */;
+			targetProxy = EC6FAF172975211D0099893C /* PBXContainerItemProxy */;
+		};
+		EC6FAF222975211D0099893C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC6FAF042975211C0099893C /* CelMek Viewer */;
+			targetProxy = EC6FAF212975211D0099893C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EC6FAF282975211D0099893C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EC6FAF292975211D0099893C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		EC6FAF2B2975211D0099893C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "CelMek Viewer/CelMek_Viewer.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CelMek Viewer/Preview Content\"";
+				DEVELOPMENT_TEAM = UZ3L4HCTN8;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.openorbit.CelMek-Viewer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		EC6FAF2C2975211D0099893C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "CelMek Viewer/CelMek_Viewer.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CelMek Viewer/Preview Content\"";
+				DEVELOPMENT_TEAM = UZ3L4HCTN8;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.openorbit.CelMek-Viewer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		EC6FAF2E2975211D0099893C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UZ3L4HCTN8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.openorbit.CelMek-ViewerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CelMek Viewer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CelMek Viewer";
+			};
+			name = Debug;
+		};
+		EC6FAF2F2975211D0099893C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UZ3L4HCTN8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.openorbit.CelMek-ViewerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CelMek Viewer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CelMek Viewer";
+			};
+			name = Release;
+		};
+		EC6FAF312975211D0099893C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UZ3L4HCTN8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.openorbit.CelMek-ViewerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "CelMek Viewer";
+			};
+			name = Debug;
+		};
+		EC6FAF322975211D0099893C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UZ3L4HCTN8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.openorbit.CelMek-ViewerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "CelMek Viewer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC6FAF002975211C0099893C /* Build configuration list for PBXProject "CelMek Viewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC6FAF282975211D0099893C /* Debug */,
+				EC6FAF292975211D0099893C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC6FAF2A2975211D0099893C /* Build configuration list for PBXNativeTarget "CelMek Viewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC6FAF2B2975211D0099893C /* Debug */,
+				EC6FAF2C2975211D0099893C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC6FAF2D2975211D0099893C /* Build configuration list for PBXNativeTarget "CelMek ViewerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC6FAF2E2975211D0099893C /* Debug */,
+				EC6FAF2F2975211D0099893C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC6FAF302975211D0099893C /* Build configuration list for PBXNativeTarget "CelMek ViewerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC6FAF312975211D0099893C /* Debug */,
+				EC6FAF322975211D0099893C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC6FAEFD2975211C0099893C /* Project object */;
+}
