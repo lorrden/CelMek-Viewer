@@ -14,6 +14,8 @@
 		EC6FAF1B2975211D0099893C /* CelMek_ViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6FAF1A2975211D0099893C /* CelMek_ViewerTests.swift */; };
 		EC6FAF252975211D0099893C /* CelMek_ViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6FAF242975211D0099893C /* CelMek_ViewerUITests.swift */; };
 		EC6FAF272975211D0099893C /* CelMek_ViewerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6FAF262975211D0099893C /* CelMek_ViewerUITestsLaunchTests.swift */; };
+		EC6FAF35297524D50099893C /* CelMek in Frameworks */ = {isa = PBXBuildFile; productRef = EC6FAF34297524D50099893C /* CelMek */; };
+		EC6FAF372975C9D80099893C /* DeltaTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6FAF362975C9D80099893C /* DeltaTView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,7 @@
 		EC6FAF202975211D0099893C /* CelMek ViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CelMek ViewerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC6FAF242975211D0099893C /* CelMek_ViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelMek_ViewerUITests.swift; sourceTree = "<group>"; };
 		EC6FAF262975211D0099893C /* CelMek_ViewerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelMek_ViewerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EC6FAF362975C9D80099893C /* DeltaTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeltaTView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC6FAF35297524D50099893C /* CelMek in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +104,7 @@
 				EC6FAF0C2975211D0099893C /* Assets.xcassets */,
 				EC6FAF112975211D0099893C /* CelMek_Viewer.entitlements */,
 				EC6FAF0E2975211D0099893C /* Preview Content */,
+				EC6FAF362975C9D80099893C /* DeltaTView.swift */,
 			);
 			path = "CelMek Viewer";
 			sourceTree = "<group>";
@@ -145,6 +150,9 @@
 			dependencies = (
 			);
 			name = "CelMek Viewer";
+			packageProductDependencies = (
+				EC6FAF34297524D50099893C /* CelMek */,
+			);
 			productName = "CelMek Viewer";
 			productReference = EC6FAF052975211C0099893C /* CelMek Viewer.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +225,9 @@
 				Base,
 			);
 			mainGroup = EC6FAEFC2975211C0099893C;
+			packageReferences = (
+				EC6FAF33297524D50099893C /* XCRemoteSwiftPackageReference "swift-celmek" */,
+			);
 			productRefGroup = EC6FAF062975211C0099893C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -261,6 +272,7 @@
 			files = (
 				EC6FAF0B2975211C0099893C /* ContentView.swift in Sources */,
 				EC6FAF092975211C0099893C /* CelMek_ViewerApp.swift in Sources */,
+				EC6FAF372975C9D80099893C /* DeltaTView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,6 +588,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EC6FAF33297524D50099893C /* XCRemoteSwiftPackageReference "swift-celmek" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorrden/swift-celmek";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EC6FAF34297524D50099893C /* CelMek */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC6FAF33297524D50099893C /* XCRemoteSwiftPackageReference "swift-celmek" */;
+			productName = CelMek;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EC6FAEFD2975211C0099893C /* Project object */;
 }
