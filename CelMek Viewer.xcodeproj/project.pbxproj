@@ -16,6 +16,7 @@
 		EC6FAF272975211D0099893C /* CelMek_ViewerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6FAF262975211D0099893C /* CelMek_ViewerUITestsLaunchTests.swift */; };
 		EC6FAF35297524D50099893C /* CelMek in Frameworks */ = {isa = PBXBuildFile; productRef = EC6FAF34297524D50099893C /* CelMek */; };
 		EC6FAF372975C9D80099893C /* DeltaTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6FAF362975C9D80099893C /* DeltaTView.swift */; };
+		EC6FAF392975CC6D0099893C /* README.adoc in Resources */ = {isa = PBXBuildFile; fileRef = EC6FAF382975CC6D0099893C /* README.adoc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		EC6FAF242975211D0099893C /* CelMek_ViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelMek_ViewerUITests.swift; sourceTree = "<group>"; };
 		EC6FAF262975211D0099893C /* CelMek_ViewerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelMek_ViewerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EC6FAF362975C9D80099893C /* DeltaTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeltaTView.swift; sourceTree = "<group>"; };
+		EC6FAF382975CC6D0099893C /* README.adoc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.adoc; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		EC6FAEFC2975211C0099893C = {
 			isa = PBXGroup;
 			children = (
+				EC6FAF382975CC6D0099893C /* README.adoc */,
 				EC6FAF072975211C0099893C /* CelMek Viewer */,
 				EC6FAF192975211D0099893C /* CelMek ViewerTests */,
 				EC6FAF232975211D0099893C /* CelMek ViewerUITests */,
@@ -245,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC6FAF102975211D0099893C /* Preview Assets.xcassets in Resources */,
+				EC6FAF392975CC6D0099893C /* README.adoc in Resources */,
 				EC6FAF0D2975211D0099893C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

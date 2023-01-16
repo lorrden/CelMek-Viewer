@@ -1,0 +1,6 @@
+= CelMek Viewer README
+
+This is a simple viewer application for the
+https://github.com/lorrden/swift-celmek[CelMek library].
+
+Currently, it only plots DeltaT values, but this may change in the future.
