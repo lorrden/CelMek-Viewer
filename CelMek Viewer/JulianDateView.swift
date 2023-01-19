@@ -21,17 +21,19 @@ import Foundation
 import SwiftUI
 import CelMek
 
-struct JewishDateView: View {
+
+struct JulianDateView: View {
   @State private var date = Date()
-  let calendar = Calendar(identifier: .hebrew)
+
+  let calendar = Calendar(identifier: .gregorian)
   var year : Int  {
     get {
       return calendar.dateComponents([.year], from: date).year!
     }
   }
-  var month : CelMek.JewishMonth  {
+  var month : CelMek.Month  {
     get {
-      return CelMek.JewishMonth(
+      return CelMek.Month(
         rawValue:
           Int32(calendar.dateComponents([.month], from: date).month!))!
     }
@@ -41,30 +43,41 @@ struct JewishDateView: View {
       return calendar.dateComponents([.day], from: date).day!
     }
   }
-  var jewishDate : JewishDate {
+  var moslemDate : MoslemDate {
     get {
-      return JewishDate(year: year, month: month, day: day)
+      return MoslemDate(julianDate: julianDate)
     }
   }
-
-  
+  var julianDate : JulianDate {
+    get {
+      return JulianDate(year: year, month: month, day: Double(day))
+    }
+  }
+  var gregorianDate : GregorianDate {
+    get {
+      return julianDate.toJD().toGregorian()
+    }
+  }
   var body: some View {
     HStack{
-      GroupBox(label: Label("Jewish Date", systemImage: "calendar.badge.clock")) {
+      GroupBox(label: Label("Julian Date", systemImage: "calendar.badge.clock")) {
         DatePicker("Date", selection: $date,
                    displayedComponents: [.date])
         .datePickerStyle(.graphical)
         .environment(\.calendar, calendar)
       }
       
-      Text("Jewish: \(jewishDate.description)")
+      VStack {
+        Text("Julian: \(julianDate.description)")
+        Text("Gregorian: \(gregorianDate.description)")
+        Text("Moslem: \(moslemDate.description)")
+      }.padding()
     }
   }
 }
 
-
-struct JewishDateView_Previews: PreviewProvider {
+struct JulianDateView_Previews: PreviewProvider {
   static var previews: some View {
-    JewishDateView()
+    JulianDateView()
   }
 }

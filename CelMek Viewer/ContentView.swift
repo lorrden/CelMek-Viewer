@@ -58,6 +58,16 @@ struct ContentView: View {
                                maxWidth: .infinity,
                                minHeight: 400,
                                maxHeight: .infinity).padding()
+      case listItems[3].id:
+        JulianDateView().frame(minWidth: 400,
+                               maxWidth: .infinity,
+                               minHeight: 400,
+                               maxHeight: .infinity).padding()
+      case listItems[4].id:
+        GregorianDateView().frame(minWidth: 400,
+                               maxWidth: .infinity,
+                               minHeight: 400,
+                               maxHeight: .infinity).padding()
       default:
         Text("Bad view").frame(minWidth: 400,
                                maxWidth: .infinity,
