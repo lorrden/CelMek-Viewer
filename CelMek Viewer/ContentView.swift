@@ -18,15 +18,58 @@
 
 
 import SwiftUI
+struct ListItem: Identifiable, Hashable {
+  let file: String
+  let name: String
+  let id = UUID()
+}
+
+private var listItems = [
+  ListItem(file: "function", name: "DeltaT"),
+  ListItem(file: "calendar", name: "Moslem Dates"),
+  ListItem(file: "calendar", name: "Jewish Dates"),
+  ListItem(file: "calendar", name: "Julian Dates"),
+  ListItem(file: "calendar", name: "Gregorian Dates")
+]
 
 struct ContentView: View {
-    var body: some View {
-      DeltaTView().padding()
-    }
+  @State private var selection = listItems[0].id
+  var body: some View {
+    HSplitView {
+      List(listItems, selection: $selection) {
+        SourceListRowView(image:
+                            Image(systemName: $0.file),
+                          name: $0.name)
+      }.frame(minWidth: 200, maxWidth: 250, maxHeight: .infinity)
+      
+      switch (selection) {
+      case listItems[0].id:
+        DeltaTView().frame(minWidth: 400,
+                           maxWidth: .infinity,
+                           minHeight: 400,
+                           maxHeight: .infinity).padding()
+      case listItems[1].id:
+        MoslemDateView().frame(minWidth: 400,
+                               maxWidth: .infinity,
+                               minHeight: 400,
+                               maxHeight: .infinity).padding()
+      case listItems[2].id:
+        JewishDateView().frame(minWidth: 400,
+                               maxWidth: .infinity,
+                               minHeight: 400,
+                               maxHeight: .infinity).padding()
+      default:
+        Text("Bad view").frame(minWidth: 400,
+                               maxWidth: .infinity,
+                               minHeight: 400,
+                               maxHeight: .infinity).padding()
+      }
+    }.frame(maxWidth: .infinity, maxHeight: .infinity)
+  }
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+  static var previews: some View {
+    ContentView()
+  }
 }

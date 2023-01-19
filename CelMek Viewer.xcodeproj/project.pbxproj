@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC16A466297671CC00769882 /* JewishDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC16A465297671CC00769882 /* JewishDateView.swift */; };
+		EC16A4682977171900769882 /* MoslemDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC16A4672977171900769882 /* MoslemDateView.swift */; };
+		EC16A46A297718A500769882 /* SourceListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC16A469297718A500769882 /* SourceListRow.swift */; };
 		EC6FAF092975211C0099893C /* CelMek_ViewerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6FAF082975211C0099893C /* CelMek_ViewerApp.swift */; };
 		EC6FAF0B2975211C0099893C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6FAF0A2975211C0099893C /* ContentView.swift */; };
 		EC6FAF0D2975211D0099893C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC6FAF0C2975211D0099893C /* Assets.xcassets */; };
@@ -37,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC16A465297671CC00769882 /* JewishDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JewishDateView.swift; sourceTree = "<group>"; };
+		EC16A4672977171900769882 /* MoslemDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoslemDateView.swift; sourceTree = "<group>"; };
+		EC16A469297718A500769882 /* SourceListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceListRow.swift; sourceTree = "<group>"; };
 		EC6FAF052975211C0099893C /* CelMek Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CelMek Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC6FAF082975211C0099893C /* CelMek_ViewerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelMek_ViewerApp.swift; sourceTree = "<group>"; };
 		EC6FAF0A2975211C0099893C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,10 +110,13 @@
 			children = (
 				EC6FAF082975211C0099893C /* CelMek_ViewerApp.swift */,
 				EC6FAF0A2975211C0099893C /* ContentView.swift */,
+				EC16A469297718A500769882 /* SourceListRow.swift */,
 				EC6FAF0C2975211D0099893C /* Assets.xcassets */,
 				EC6FAF112975211D0099893C /* CelMek_Viewer.entitlements */,
 				EC6FAF0E2975211D0099893C /* Preview Content */,
 				EC6FAF362975C9D80099893C /* DeltaTView.swift */,
+				EC16A465297671CC00769882 /* JewishDateView.swift */,
+				EC16A4672977171900769882 /* MoslemDateView.swift */,
 			);
 			path = "CelMek Viewer";
 			sourceTree = "<group>";
@@ -276,7 +285,10 @@
 			files = (
 				EC6FAF0B2975211C0099893C /* ContentView.swift in Sources */,
 				EC6FAF092975211C0099893C /* CelMek_ViewerApp.swift in Sources */,
+				EC16A4682977171900769882 /* MoslemDateView.swift in Sources */,
+				EC16A466297671CC00769882 /* JewishDateView.swift in Sources */,
 				EC6FAF372975C9D80099893C /* DeltaTView.swift in Sources */,
+				EC16A46A297718A500769882 /* SourceListRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
