@@ -12,6 +12,7 @@
 		EC16A46A297718A500769882 /* SourceListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC16A469297718A500769882 /* SourceListRow.swift */; };
 		EC6255D82979DF0600E164D0 /* GregorianDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6255D72979DF0600E164D0 /* GregorianDateView.swift */; };
 		EC6255DA2979E01E00E164D0 /* JulianDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6255D92979E01E00E164D0 /* JulianDateView.swift */; };
+		EC6255DC297A67E100E164D0 /* CurrentDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6255DB297A67E100E164D0 /* CurrentDateView.swift */; };
 		EC6FAF092975211C0099893C /* CelMek_ViewerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6FAF082975211C0099893C /* CelMek_ViewerApp.swift */; };
 		EC6FAF0B2975211C0099893C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6FAF0A2975211C0099893C /* ContentView.swift */; };
 		EC6FAF0D2975211D0099893C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC6FAF0C2975211D0099893C /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 		EC16A469297718A500769882 /* SourceListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceListRow.swift; sourceTree = "<group>"; };
 		EC6255D72979DF0600E164D0 /* GregorianDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GregorianDateView.swift; sourceTree = "<group>"; };
 		EC6255D92979E01E00E164D0 /* JulianDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JulianDateView.swift; sourceTree = "<group>"; };
+		EC6255DB297A67E100E164D0 /* CurrentDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDateView.swift; sourceTree = "<group>"; };
 		EC6FAF052975211C0099893C /* CelMek Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CelMek Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC6FAF082975211C0099893C /* CelMek_ViewerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelMek_ViewerApp.swift; sourceTree = "<group>"; };
 		EC6FAF0A2975211C0099893C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				EC16A4672977171900769882 /* MoslemDateView.swift */,
 				EC6255D72979DF0600E164D0 /* GregorianDateView.swift */,
 				EC6255D92979E01E00E164D0 /* JulianDateView.swift */,
+				EC6255DB297A67E100E164D0 /* CurrentDateView.swift */,
 			);
 			path = "CelMek Viewer";
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 			files = (
 				EC6FAF0B2975211C0099893C /* ContentView.swift in Sources */,
 				EC6FAF092975211C0099893C /* CelMek_ViewerApp.swift in Sources */,
+				EC6255DC297A67E100E164D0 /* CurrentDateView.swift in Sources */,
 				EC16A4682977171900769882 /* MoslemDateView.swift in Sources */,
 				EC6255DA2979E01E00E164D0 /* JulianDateView.swift in Sources */,
 				EC16A466297671CC00769882 /* JewishDateView.swift in Sources */,

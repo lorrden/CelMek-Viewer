@@ -29,7 +29,8 @@ private var listItems = [
   ListItem(file: "calendar", name: "Moslem Dates"),
   ListItem(file: "calendar", name: "Jewish Dates"),
   ListItem(file: "calendar", name: "Julian Dates"),
-  ListItem(file: "calendar", name: "Gregorian Dates")
+  ListItem(file: "calendar", name: "Gregorian Dates"),
+  ListItem(file: "calendar", name: "Current Date")
 ]
 
 struct ContentView: View {
@@ -65,6 +66,11 @@ struct ContentView: View {
                                maxHeight: .infinity).padding()
       case listItems[4].id:
         GregorianDateView().frame(minWidth: 400,
+                               maxWidth: .infinity,
+                               minHeight: 400,
+                               maxHeight: .infinity).padding()
+      case listItems[5].id:
+        CurrentDateView().frame(minWidth: 400,
                                maxWidth: .infinity,
                                minHeight: 400,
                                maxHeight: .infinity).padding()

@@ -22,10 +22,10 @@ import SwiftUI
 import CelMek
 
 
-struct GregorianDateView: View {
+struct CurrentDateView: View {
   @State private var date = Date()
-
   let calendar = Calendar(identifier: .gregorian)
+
   var year : Int  {
     get {
       return calendar.dateComponents([.year], from: date).year!
@@ -43,6 +43,14 @@ struct GregorianDateView: View {
       return calendar.dateComponents([.day], from: date).day!
     }
   }
+  var timeOfDay: Double {
+    let components = calendar.dateComponents(in: .gmt, from: date)
+    let hour = Double(components.hour!)
+    let minute = Double(components.minute!)
+    let second = Double(components.second!)
+    let nanosecond = Double(components.nanosecond!)
+    return hour / 24.0 + minute / 60.0 / 24.0 + second / 60.0 / 60.0 / 24.0 + nanosecond / 1000000000.0 / 60.0 / 60.0 / 24.0
+  }
   var moslemDate : MoslemDate {
     get {
       return MoslemDate(julianDate: julianDate)
@@ -55,31 +63,22 @@ struct GregorianDateView: View {
   }
   var gregorianDate : GregorianDate {
     get {
-      return GregorianDate(year: year, month: month, day: Double(day))
+      return GregorianDate(year: year, month: month, day: Double(day) + timeOfDay)
     }
   }
   var body: some View {
-    HStack{
-      GroupBox(label: Label("Gregorian Date", systemImage: "calendar.badge.clock")) {
-        DatePicker("Date", selection: $date,
-                   displayedComponents: [.date])
-        .datePickerStyle(.graphical)
-        .environment(\.calendar, calendar)
-      }
-      
-      VStack {
-        Text("Gregorian: \(gregorianDate.description)")
-        Text("Julian: \(julianDate.description)")
-        Text("Moslem: \(moslemDate.description)")
-        Text("JD: \(gregorianDate.toJD())")
-        Text("MJD: \(gregorianDate.toJD().asMJD)")
-      }.padding()
-    }
+    VStack {
+      Text("JD: \(gregorianDate.toJD())")
+      Text("MJD: \(gregorianDate.toJD().asMJD)")
+      Text("Gregorian: \(gregorianDate.description)")
+      Text("Julian: \(julianDate.description)")
+      Text("Moslem: \(moslemDate.description)")
+    }.padding()
   }
 }
 
-struct GregorianDateView_Previews: PreviewProvider {
+struct CurrentDateView_Previews: PreviewProvider {
   static var previews: some View {
-    GregorianDateView()
+    CurrentDateView()
   }
 }

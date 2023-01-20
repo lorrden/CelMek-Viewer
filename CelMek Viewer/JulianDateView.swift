@@ -71,6 +71,8 @@ struct JulianDateView: View {
         Text("Julian: \(julianDate.description)")
         Text("Gregorian: \(gregorianDate.description)")
         Text("Moslem: \(moslemDate.description)")
+        Text("JD: \(julianDate.toJD())")
+        Text("MJD: \(julianDate.toJD().asMJD)")
       }.padding()
     }
   }
