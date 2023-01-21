@@ -44,8 +44,26 @@ func getJulianEasterDates() -> [IdentifiableJulianDate] {
   return easters
 }
 
+func currentJulianDate() -> Foundation.Date
+{
+  let calendar = Calendar(identifier: .gregorian)
+  let currentDate = Date()
+  let components = calendar.dateComponents([.year, .month, .day], from: currentDate)
+  let gregorianDate = GregorianDate(year: components.year!,
+                               month: Month(rawValue: Int32(components.month!))!,
+                               day: Double(components.day!))
+  let julianDate = gregorianDate.toJD().toJulian()
+  
+  var julianComponents = DateComponents()
+  julianComponents.calendar = calendar
+  julianComponents.year = julianDate.year
+  julianComponents.month = Int(julianDate.month.rawValue)
+  julianComponents.day = Int(julianDate.day)
+  return julianComponents.date!
+}
+
 struct JulianDateView: View {
-  @State private var date = Date()
+  @State private var date = currentJulianDate()
   
   let calendar = Calendar(identifier: .gregorian)
   var year : Int  {
