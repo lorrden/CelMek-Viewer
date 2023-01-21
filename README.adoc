@@ -18,3 +18,6 @@ Features planned, includes the following (ticks for the ones in a usable state):
 - [ ] Earth coordinate conversions
 - [ ] Lunar positions
 - [ ] Astronomical coordinate conversions
+
+NOTE: Julian Dates are not supported in SwiftUI date pickers, so the we show a Gregorian calendar view instead.
+However, this means that you will not see leap days when they are not in the Gregorian calendar.
