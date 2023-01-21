@@ -21,6 +21,27 @@ import Foundation
 import SwiftUI
 import CelMek
 
+struct IdentifiableGregorianDate: Identifiable {
+  var date: GregorianDate
+  let id = UUID()
+  
+  var year: String {
+    String(date.year)
+  }
+  var month: String {
+    String(date.month.description)
+  }
+  var day: String {
+    String(Int(date.day))
+  }
+}
+func getGregorianEasterDates() -> [IdentifiableGregorianDate] {
+  var easters = [IdentifiableGregorianDate]()
+  for i in 1583 ... 2500 {
+    easters.append(IdentifiableGregorianDate(date: gregorianDateOfEaster(year: i)))
+  }
+  return easters
+}
 
 struct GregorianDateView: View {
   @State private var date = Date()
@@ -59,25 +80,34 @@ struct GregorianDateView: View {
     }
   }
   var body: some View {
-    GroupBox(label: Label("Gregorian Date", systemImage: "calendar.badge.clock")) {
-      HStack{
-        DatePicker("Date", selection: $date,
-                   displayedComponents: [.date])
-        .datePickerStyle(.graphical)
-        .environment(\.calendar, calendar)
-        
-        VStack {
-          Text("Gregorian: \(gregorianDate.description)")
-          Text("Julian: \(julianDate.description)")
-          Text("Moslem: \(moslemDate.description)")
-          Text("JD: \(gregorianDate.toJD())")
-          Text("MJD: \(gregorianDate.toJD().asMJD)")
+    VStack {
+      GroupBox(label: Label("Gregorian Date", systemImage: "calendar.badge.clock")) {
+        HStack{
+          DatePicker("Date", selection: $date,
+                     displayedComponents: [.date])
+          .datePickerStyle(.graphical)
+          .environment(\.calendar, calendar)
+          
+          VStack {
+            Text("Gregorian: \(gregorianDate.description)")
+            Text("Julian: \(julianDate.description)")
+            Text("Moslem: \(moslemDate.description)")
+            Text("JD: \(gregorianDate.toJD())")
+            Text("MJD: \(gregorianDate.toJD().asMJD)")
+          }
+        }
+      }
+      
+      GroupBox(label: Label("Gregorian Easter", systemImage: "calendar.badge.clock")) {
+        Table(getGregorianEasterDates()) {
+          TableColumn("Year", value: \.year)
+          TableColumn("Month", value: \.month)
+          TableColumn("Day", value: \.day)
         }
       }
     }
   }
 }
-
 struct GregorianDateView_Previews: PreviewProvider {
   static var previews: some View {
     GregorianDateView()

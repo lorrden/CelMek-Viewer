@@ -10,8 +10,8 @@ Features planned, includes the following (ticks for the ones in a usable state):
 - [x] Conversions from Gregorian calendar
 - [x] Conversions from Julian calendar
 - [ ] Conversions from Jewish dates
-- [ ] Gregorian Day of Easter
-- [ ] Julian Day of Easter
+- [x] Gregorian Day of Easter
+- [x] Julian Day of Easter
 - [ ] Jewish Day of Easter
 - [x] Current date / time display
 - [ ] Planetary orbital elements and positions

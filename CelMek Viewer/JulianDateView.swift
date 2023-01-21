@@ -21,6 +21,28 @@ import Foundation
 import SwiftUI
 import CelMek
 
+struct IdentifiableJulianDate: Identifiable {
+  var date: JulianDate
+  let id = UUID()
+  
+  var year: String {
+    String(date.year)
+  }
+  var month: String {
+    String(date.month.description)
+  }
+  var day: String {
+    String(Int(date.day))
+  }
+}
+
+func getJulianEasterDates() -> [IdentifiableJulianDate] {
+  var easters = [IdentifiableJulianDate]()
+  for i in 1000 ... 2500 {
+    easters.append(IdentifiableJulianDate(date: julianDateOfEaster(year: i)))
+  }
+  return easters
+}
 
 struct JulianDateView: View {
   @State private var date = Date()
@@ -59,19 +81,28 @@ struct JulianDateView: View {
     }
   }
   var body: some View {
-    GroupBox(label: Label("Julian Date", systemImage: "calendar.badge.clock")) {
-      HStack{
-        DatePicker("Date", selection: $date,
-                   displayedComponents: [.date])
-        .datePickerStyle(.graphical)
-        .environment(\.calendar, calendar)
-        
-        VStack {
-          Text("Julian: \(julianDate.description)")
-          Text("Gregorian: \(gregorianDate.description)")
-          Text("Moslem: \(moslemDate.description)")
-          Text("JD: \(julianDate.toJD())")
-          Text("MJD: \(julianDate.toJD().asMJD)")
+    VStack {
+      GroupBox(label: Label("Julian Date", systemImage: "calendar.badge.clock")) {
+        HStack{
+          DatePicker("Date", selection: $date,
+                     displayedComponents: [.date])
+          .datePickerStyle(.graphical)
+          .environment(\.calendar, calendar)
+          
+          VStack {
+            Text("Julian: \(julianDate.description)")
+            Text("Gregorian: \(gregorianDate.description)")
+            Text("Moslem: \(moslemDate.description)")
+            Text("JD: \(julianDate.toJD())")
+            Text("MJD: \(julianDate.toJD().asMJD)")
+          }
+        }
+      }
+      GroupBox(label: Label("Julian Easter", systemImage: "calendar.badge.clock")) {
+        Table(getJulianEasterDates()) {
+          TableColumn("Year", value: \.year)
+          TableColumn("Month", value: \.month)
+          TableColumn("Day", value: \.day)
         }
       }
     }
