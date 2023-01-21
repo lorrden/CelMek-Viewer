@@ -66,12 +66,22 @@ struct MoslemDateView: View {
         .datePickerStyle(.graphical)
         .environment(\.calendar, calendar)
         
-        VStack {
-          Text("Moslem: \(moslemDate.description)")
-          Text("Julian: \(julianDate.description)")
-          Text("Gregorian: \(gregorianDate.description)")
-          Text("JD: \(julianDate.toJD())")
-          Text("MJD: \(julianDate.toJD().asMJD)")
+        List {
+          LabeledContent("Moslem") {
+            Text("\(moslemDate.description)")
+          }
+          LabeledContent("Julian") {
+            Text("\(julianDate.description)")
+          }
+          LabeledContent("Gregorian") {
+            Text("\(gregorianDate.description)")
+          }
+          LabeledContent("JD") {
+            Text("\(julianDate.toJD())")
+          }
+          LabeledContent("MJD") {
+            Text("\(julianDate.toJD().asMJD)")
+          }
         }
       }
     }

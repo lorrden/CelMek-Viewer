@@ -50,8 +50,8 @@ func currentJulianDate() -> Foundation.Date
   let currentDate = Date()
   let components = calendar.dateComponents([.year, .month, .day], from: currentDate)
   let gregorianDate = GregorianDate(year: components.year!,
-                               month: Month(rawValue: Int32(components.month!))!,
-                               day: Double(components.day!))
+                                    month: Month(rawValue: Int32(components.month!))!,
+                                    day: Double(components.day!))
   let julianDate = gregorianDate.toJD().toJulian()
   
   var julianComponents = DateComponents()
@@ -107,12 +107,22 @@ struct JulianDateView: View {
           .datePickerStyle(.graphical)
           .environment(\.calendar, calendar)
           
-          VStack {
-            Text("Julian: \(julianDate.description)")
-            Text("Gregorian: \(gregorianDate.description)")
-            Text("Moslem: \(moslemDate.description)")
-            Text("JD: \(julianDate.toJD())")
-            Text("MJD: \(julianDate.toJD().asMJD)")
+          List {
+            LabeledContent("Julian") {
+              Text("\(julianDate.description)")
+            }
+            LabeledContent("Gregorian") {
+              Text("\(gregorianDate.description)")
+            }
+            LabeledContent("Moslem") {
+              Text("\(moslemDate.description)")
+            }
+            LabeledContent("JD") {
+              Text("\(julianDate.toJD())")
+            }
+            LabeledContent("MJD") {
+              Text("\(julianDate.toJD().asMJD)")
+            }
           }
         }
       }

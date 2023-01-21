@@ -28,19 +28,42 @@ struct CurrentDateView: View {
   
   var year : Int  {
     get {
-      return calendar.dateComponents([.year], from: date).year!
+      let components = calendar.dateComponents(in: .gmt, from: date)
+      return components.year!
+    }
+  }
+  var localYear : Int  {
+    get {
+      let components = calendar.dateComponents(in: .current, from: date)
+      return components.year!
     }
   }
   var month : CelMek.Month  {
     get {
+      let components = calendar.dateComponents(in: .gmt, from: date)
       return CelMek.Month(
         rawValue:
-          Int32(calendar.dateComponents([.month], from: date).month!))!
+          Int32(components.month!))!
+    }
+  }
+  var localMonth : CelMek.Month  {
+    get {
+      let components = calendar.dateComponents(in: .current, from: date)
+      return CelMek.Month(
+        rawValue:
+          Int32(components.month!))!
     }
   }
   var day : Int {
     get {
-      return calendar.dateComponents([.day], from: date).day!
+      let components = calendar.dateComponents(in: .gmt, from: date)
+      return components.day!
+    }
+  }
+  var localDay : Int {
+    get {
+      let components = calendar.dateComponents(in: .current, from: date)
+      return components.day!
     }
   }
   var timeOfDay: Double {
@@ -51,9 +74,24 @@ struct CurrentDateView: View {
     let nanosecond = Double(components.nanosecond!)
     return hour / 24.0 + minute / 60.0 / 24.0 + second / 60.0 / 60.0 / 24.0 + nanosecond / 1000000000.0 / 60.0 / 60.0 / 24.0
   }
+  
+  var localTimeOfDay: Double {
+    let components = calendar.dateComponents(in: .current, from: date)
+    let hour = Double(components.hour!)
+    let minute = Double(components.minute!)
+    let second = Double(components.second!)
+    let nanosecond = Double(components.nanosecond!)
+    return hour / 24.0 + minute / 60.0 / 24.0 + second / 60.0 / 60.0 / 24.0 + nanosecond / 1000000000.0 / 60.0 / 60.0 / 24.0
+  }
+  
   var moslemDate : MoslemDate {
     get {
       return MoslemDate(julianDate: julianDate)
+    }
+  }
+  var localMoslemDate : MoslemDate {
+    get {
+      return MoslemDate(julianDate: localJulianDate)
     }
   }
   var julianDate : JulianDate {
@@ -61,21 +99,64 @@ struct CurrentDateView: View {
       return gregorianDate.toJD().toJulian()
     }
   }
+  var localJulianDate : JulianDate {
+    get {
+      return localGregorianDate.toJD().toJulian()
+    }
+  }
   var gregorianDate : GregorianDate {
     get {
       return GregorianDate(year: year, month: month, day: Double(day) + timeOfDay)
     }
   }
+  var localGregorianDate : GregorianDate {
+    get {
+      return GregorianDate(year: localYear, month: localMonth, day: Double(localDay) + localTimeOfDay)
+    }
+  }
+  
   var body: some View {
-    VStack {
-      Text("JD: \(gregorianDate.toJD())")
-      Text("MJD: \(gregorianDate.toJD().asMJD)")
-      Text("Gregorian: \(gregorianDate.description)")
-      Text("Julian: \(julianDate.description)")
-      Text("Moslem: \(moslemDate.description)")
-    }.padding()
+    HStack {
+      GroupBox(label: Label("UTC", systemImage: "calendar.badge.clock")) {
+        List {
+          LabeledContent("JD") {
+            Text("\(gregorianDate.toJD())")
+          }
+          LabeledContent("MJD") {
+            Text("\(gregorianDate.toJD().asMJD)")
+          }
+          LabeledContent("Gregorian") {
+            Text("\(gregorianDate.description)")
+          }
+          LabeledContent("Julian") {
+            Text("\(julianDate.description)")
+          }
+          LabeledContent("Moslem") {
+            Text("\(moslemDate.description)")
+          }
+        }
+      }
+      
+      GroupBox(label: Label("Local", systemImage: "calendar.badge.clock")) {
+        List {
+          LabeledContent("MJD") {
+            Text("\(localGregorianDate.toJD().asMJD)")
+          }
+          LabeledContent("Gregorian") {
+            Text("\(localGregorianDate.description)")
+          }
+          LabeledContent("Julian") {
+            Text("\(localJulianDate.description)")
+          }
+          LabeledContent("Moslem") {
+            Text("\(localMoslemDate.description)")
+          }
+        }
+      }
+    }
   }
 }
+
 
 struct CurrentDateView_Previews: PreviewProvider {
   static var previews: some View {

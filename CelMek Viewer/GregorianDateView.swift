@@ -88,12 +88,22 @@ struct GregorianDateView: View {
           .datePickerStyle(.graphical)
           .environment(\.calendar, calendar)
           
-          VStack {
-            Text("Gregorian: \(gregorianDate.description)")
-            Text("Julian: \(julianDate.description)")
-            Text("Moslem: \(moslemDate.description)")
-            Text("JD: \(gregorianDate.toJD())")
-            Text("MJD: \(gregorianDate.toJD().asMJD)")
+          List {
+            LabeledContent("Gregorian") {
+              Text("\(gregorianDate.description)")
+            }
+            LabeledContent("Julian") {
+              Text("\(julianDate.description)")
+            }
+            LabeledContent("Moslem") {
+              Text("\(moslemDate.description)")
+            }
+            LabeledContent("JD") {
+              Text("\(julianDate.toJD())")
+            }
+            LabeledContent("MJD") {
+              Text("\(julianDate.toJD().asMJD)")
+            }
           }
         }
       }
