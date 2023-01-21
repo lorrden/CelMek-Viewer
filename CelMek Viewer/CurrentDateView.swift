@@ -23,7 +23,10 @@ import CelMek
 
 
 struct CurrentDateView: View {
-  @State private var date = Date()
+  private var date: Foundation.Date
+  init(date: Foundation.Date) {
+    self.date = date
+  }
   let calendar = Calendar(identifier: .gregorian)
   
   var year : Int  {
@@ -160,6 +163,6 @@ struct CurrentDateView: View {
 
 struct CurrentDateView_Previews: PreviewProvider {
   static var previews: some View {
-    CurrentDateView()
+    CurrentDateView(date: Date())
   }
 }

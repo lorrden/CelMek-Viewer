@@ -70,10 +70,13 @@ struct ContentView: View {
                                   minHeight: 400,
                                   maxHeight: .infinity).padding()
       case listItems[5].id:
-        CurrentDateView().frame(minWidth: 400,
-                                maxWidth: .infinity,
-                                minHeight: 400,
-                                maxHeight: .infinity).padding()
+        TimelineView(.periodic(from: Date(), by: 1)) { context in
+          CurrentDateView(date: context.date)
+            .frame(minWidth: 400,
+                   maxWidth: .infinity,
+                   minHeight: 400,
+                   maxHeight: .infinity).padding()
+        }
       default:
         Text("Bad view").frame(minWidth: 400,
                                maxWidth: .infinity,
