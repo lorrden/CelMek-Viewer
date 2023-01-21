@@ -24,7 +24,7 @@ import CelMek
 
 struct GregorianDateView: View {
   @State private var date = Date()
-
+  
   let calendar = Calendar(identifier: .gregorian)
   var year : Int  {
     get {
@@ -59,21 +59,21 @@ struct GregorianDateView: View {
     }
   }
   var body: some View {
-    HStack{
-      GroupBox(label: Label("Gregorian Date", systemImage: "calendar.badge.clock")) {
+    GroupBox(label: Label("Gregorian Date", systemImage: "calendar.badge.clock")) {
+      HStack{
         DatePicker("Date", selection: $date,
                    displayedComponents: [.date])
         .datePickerStyle(.graphical)
         .environment(\.calendar, calendar)
+        
+        VStack {
+          Text("Gregorian: \(gregorianDate.description)")
+          Text("Julian: \(julianDate.description)")
+          Text("Moslem: \(moslemDate.description)")
+          Text("JD: \(gregorianDate.toJD())")
+          Text("MJD: \(gregorianDate.toJD().asMJD)")
+        }
       }
-      
-      VStack {
-        Text("Gregorian: \(gregorianDate.description)")
-        Text("Julian: \(julianDate.description)")
-        Text("Moslem: \(moslemDate.description)")
-        Text("JD: \(gregorianDate.toJD())")
-        Text("MJD: \(gregorianDate.toJD().asMJD)")
-      }.padding()
     }
   }
 }

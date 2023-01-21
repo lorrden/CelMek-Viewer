@@ -24,7 +24,7 @@ import CelMek
 
 struct MoslemDateView: View {
   @State private var date = Date()
-
+  
   let calendar = Calendar(identifier: .islamicCivil)
   var year : Int  {
     get {
@@ -59,21 +59,21 @@ struct MoslemDateView: View {
     }
   }
   var body: some View {
-    HStack{
-      GroupBox(label: Label("Moslem Date", systemImage: "calendar.badge.clock")) {
+    GroupBox(label: Label("Moslem Date", systemImage: "calendar.badge.clock")) {
+      HStack{
         DatePicker("Date", selection: $date,
                    displayedComponents: [.date])
         .datePickerStyle(.graphical)
         .environment(\.calendar, calendar)
+        
+        VStack {
+          Text("Moslem: \(moslemDate.description)")
+          Text("Julian: \(julianDate.description)")
+          Text("Gregorian: \(gregorianDate.description)")
+          Text("JD: \(julianDate.toJD())")
+          Text("MJD: \(julianDate.toJD().asMJD)")
+        }
       }
-      
-      VStack {
-        Text("Moslem: \(moslemDate.description)")
-        Text("Julian: \(julianDate.description)")
-        Text("Gregorian: \(gregorianDate.description)")
-        Text("JD: \(julianDate.toJD())")
-        Text("MJD: \(julianDate.toJD().asMJD)")
-      }.padding()
     }
   }
 }

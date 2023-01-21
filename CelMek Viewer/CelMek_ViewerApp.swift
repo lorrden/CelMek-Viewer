@@ -21,9 +21,9 @@ import SwiftUI
 
 @main
 struct CelMek_ViewerApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      ContentView()
     }
+  }
 }

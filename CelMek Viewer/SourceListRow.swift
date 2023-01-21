@@ -25,9 +25,9 @@ struct SourceListRowView: View {
   var body: some View {
     HStack {
       image.resizable()
-           .frame(width: 50, height: 50)
+        .frame(width: 50, height: 50)
       Text(name)
-        Spacer()
+      Spacer()
     }
   }
 }

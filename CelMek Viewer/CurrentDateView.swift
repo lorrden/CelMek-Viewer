@@ -25,7 +25,7 @@ import CelMek
 struct CurrentDateView: View {
   @State private var date = Date()
   let calendar = Calendar(identifier: .gregorian)
-
+  
   var year : Int  {
     get {
       return calendar.dateComponents([.year], from: date).year!

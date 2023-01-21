@@ -66,14 +66,14 @@ struct ContentView: View {
                                maxHeight: .infinity).padding()
       case listItems[4].id:
         GregorianDateView().frame(minWidth: 400,
-                               maxWidth: .infinity,
-                               minHeight: 400,
-                               maxHeight: .infinity).padding()
+                                  maxWidth: .infinity,
+                                  minHeight: 400,
+                                  maxHeight: .infinity).padding()
       case listItems[5].id:
         CurrentDateView().frame(minWidth: 400,
-                               maxWidth: .infinity,
-                               minHeight: 400,
-                               maxHeight: .infinity).padding()
+                                maxWidth: .infinity,
+                                minHeight: 400,
+                                maxHeight: .infinity).padding()
       default:
         Text("Bad view").frame(minWidth: 400,
                                maxWidth: .infinity,

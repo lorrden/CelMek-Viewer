@@ -50,24 +50,24 @@ func makeDeltaTPoints() -> [DeltaTValue] {
 
 
 struct DeltaTView: View {
-    var body: some View {
-      Chart {
-        ForEach(makeDeltaTPoints(), id: \.date) { item in
-                LineMark(
-                    x: .value("Date", item.date),
-                    y: .value("DT", item.dt),
-                    series: .value("DT", "A")
-                )
-                .foregroundStyle(.blue)
-            }
-
-      }.padding()
-    }
+  var body: some View {
+    Chart {
+      ForEach(makeDeltaTPoints(), id: \.date) { item in
+        LineMark(
+          x: .value("Date", item.date),
+          y: .value("DT", item.dt),
+          series: .value("DT", "A")
+        )
+        .foregroundStyle(.blue)
+      }
+      
+    }.padding()
+  }
 }
 
 
 struct DeltaTView_Previews: PreviewProvider {
-    static var previews: some View {
-        DeltaTView()
-    }
+  static var previews: some View {
+    DeltaTView()
+  }
 }
