@@ -43,7 +43,7 @@ jobs:
       - name: Build
         run: |
           xcodebuild -project CelMek\ Viewer.xcodeproj -scheme 'CelMek Viewer' -config Release -derivedDataPath build
-          zip 'CelMek Viewer.zip' build/Build/Products/Release/CelMek\ Viewer.app
+          zip -r CelMek-Viewer.zip "build/Build/Products/Release/CelMek Viewer.app"
       - name: Archive Binary
         uses: actions/upload-artifact@v3
         with:
@@ -53,8 +53,8 @@ jobs:
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.PAT }}
-          file: 'CelMek Viewer.zip'
-          asset_name: CelMek-Viewer
+          file: 'CelMek-Viewer.zip'
+          asset_name: CelMek-Viewer.zip
           tag: latest
           overwrite: true
           body: "Latest build of CelMek Viewer.app"
