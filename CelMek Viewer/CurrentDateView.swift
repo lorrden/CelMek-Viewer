@@ -46,7 +46,7 @@ struct CurrentDateView: View {
       let components = calendar.dateComponents(in: .gmt, from: date)
       return CelMek.Month(
         rawValue:
-          Int32(components.month!))!
+          components.month!)!
     }
   }
   var localMonth : CelMek.Month  {
@@ -54,7 +54,7 @@ struct CurrentDateView: View {
       let components = calendar.dateComponents(in: .current, from: date)
       return CelMek.Month(
         rawValue:
-          Int32(components.month!))!
+          components.month!)!
     }
   }
   var day : Int {

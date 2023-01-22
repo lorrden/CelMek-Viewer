@@ -50,7 +50,7 @@ func currentJulianDate() -> Foundation.Date
   let currentDate = Date()
   let components = calendar.dateComponents([.year, .month, .day], from: currentDate)
   let gregorianDate = GregorianDate(year: components.year!,
-                                    month: Month(rawValue: Int32(components.month!))!,
+                                    month: Month(rawValue: components.month!)!,
                                     day: Double(components.day!))
   let julianDate = gregorianDate.toJD().toJulian()
 
@@ -77,7 +77,7 @@ struct JulianDateView: View {
     get {
       return CelMek.Month(
         rawValue:
-          Int32(calendar.dateComponents([.month], from: date).month!))!
+          calendar.dateComponents([.month], from: date).month!)!
     }
   }
   var day : Int {

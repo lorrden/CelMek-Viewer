@@ -35,7 +35,7 @@ struct MoslemDateView: View {
     get {
       return CelMek.MoslemMonth(
         rawValue:
-          Int32(calendar.dateComponents([.month], from: date).month!))!
+          calendar.dateComponents([.month], from: date).month!)!
     }
   }
   var day : Int {

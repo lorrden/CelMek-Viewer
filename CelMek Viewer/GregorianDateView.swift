@@ -57,7 +57,7 @@ struct GregorianDateView: View {
     get {
       return CelMek.Month(
         rawValue:
-          Int32(calendar.dateComponents([.month], from: date).month!))!
+          calendar.dateComponents([.month], from: date).month!)!
     }
   }
   var day : Int {

@@ -33,7 +33,7 @@ struct JewishDateView: View {
     get {
       return CelMek.JewishMonth(
         rawValue:
-          Int32(calendar.dateComponents([.month], from: date).month!))!
+          calendar.dateComponents([.month], from: date).month!)!
     }
   }
   var day : Int {
