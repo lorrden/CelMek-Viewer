@@ -28,7 +28,7 @@ struct CurrentDateView: View {
     self.date = date
   }
   let calendar = Calendar(identifier: .gregorian)
-  
+
   var year : Int  {
     get {
       let components = calendar.dateComponents(in: .gmt, from: date)
@@ -77,7 +77,7 @@ struct CurrentDateView: View {
     let nanosecond = Double(components.nanosecond!)
     return hour / 24.0 + minute / 60.0 / 24.0 + second / 60.0 / 60.0 / 24.0 + nanosecond / 1000000000.0 / 60.0 / 60.0 / 24.0
   }
-  
+
   var localTimeOfDay: Double {
     let components = calendar.dateComponents(in: .current, from: date)
     let hour = Double(components.hour!)
@@ -86,7 +86,7 @@ struct CurrentDateView: View {
     let nanosecond = Double(components.nanosecond!)
     return hour / 24.0 + minute / 60.0 / 24.0 + second / 60.0 / 60.0 / 24.0 + nanosecond / 1000000000.0 / 60.0 / 60.0 / 24.0
   }
-  
+
   var moslemDate : MoslemDate {
     get {
       return MoslemDate(julianDate: julianDate)
@@ -117,7 +117,7 @@ struct CurrentDateView: View {
       return GregorianDate(year: localYear, month: localMonth, day: Double(localDay) + localTimeOfDay)
     }
   }
-  
+
   var body: some View {
     HStack {
       GroupBox(label: Label("UTC", systemImage: "calendar.badge.clock")) {
@@ -139,7 +139,7 @@ struct CurrentDateView: View {
           }
         }
       }
-      
+
       GroupBox(label: Label("Local", systemImage: "calendar.badge.clock")) {
         List {
           LabeledContent("MJD") {

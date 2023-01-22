@@ -42,7 +42,7 @@ struct ContentView: View {
                             Image(systemName: $0.file),
                           name: $0.name)
       }.frame(minWidth: 200, maxWidth: 250, maxHeight: .infinity)
-      
+
       switch (selection) {
       case listItems[0].id:
         DeltaTView().frame(minWidth: 400,

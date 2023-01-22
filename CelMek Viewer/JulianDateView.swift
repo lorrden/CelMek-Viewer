@@ -24,7 +24,7 @@ import CelMek
 struct IdentifiableJulianDate: Identifiable {
   var date: JulianDate
   let id = UUID()
-  
+
   var year: String {
     String(date.year)
   }
@@ -53,7 +53,7 @@ func currentJulianDate() -> Foundation.Date
                                     month: Month(rawValue: Int32(components.month!))!,
                                     day: Double(components.day!))
   let julianDate = gregorianDate.toJD().toJulian()
-  
+
   var julianComponents = DateComponents()
   julianComponents.calendar = calendar
   julianComponents.year = julianDate.year
@@ -108,7 +108,7 @@ struct JulianDateView: View {
                      displayedComponents: [.date])
           .datePickerStyle(.graphical)
           .environment(\.calendar, calendar)
-          
+
           List {
             LabeledContent("Julian") {
               Text("\(julianDate.description)")
@@ -140,11 +140,10 @@ struct JulianDateView: View {
           let selectedItems = easterRows.filter { item in
             return tableSelection.contains(item.id)
           }
-          
+
           for item in selectedItems {
             items.append(NSItemProvider(object: "\(item.date)" as NSString))
           }
-          
           return items
         }
       }

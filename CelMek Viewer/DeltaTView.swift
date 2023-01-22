@@ -48,7 +48,6 @@ func makeDeltaTPoints() -> [DeltaTValue] {
   return deltaTValues
 }
 
-
 struct DeltaTView: View {
   var body: some View {
     Chart {
@@ -60,7 +59,6 @@ struct DeltaTView: View {
         )
         .foregroundStyle(.blue)
       }
-      
     }.padding()
   }
 }

@@ -24,7 +24,7 @@ import CelMek
 
 struct MoslemDateView: View {
   @State private var date = Date()
-  
+
   let calendar = Calendar(identifier: .islamicCivil)
   var year : Int  {
     get {
@@ -65,7 +65,7 @@ struct MoslemDateView: View {
                    displayedComponents: [.date])
         .datePickerStyle(.graphical)
         .environment(\.calendar, calendar)
-        
+
         List {
           LabeledContent("Moslem") {
             Text("\(moslemDate.description)")

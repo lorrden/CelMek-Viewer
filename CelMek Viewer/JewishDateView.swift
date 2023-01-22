@@ -46,8 +46,7 @@ struct JewishDateView: View {
       return JewishDate(year: year, month: month, day: day)
     }
   }
-  
-  
+
   var body: some View {
     GroupBox(label: Label("Jewish Date", systemImage: "calendar.badge.clock")) {
       HStack{
@@ -55,7 +54,7 @@ struct JewishDateView: View {
                    displayedComponents: [.date])
         .datePickerStyle(.graphical)
         .environment(\.calendar, calendar)
-        
+
         Text("Jewish: \(jewishDate.description)")
       }
     }

@@ -24,7 +24,7 @@ import CelMek
 struct IdentifiableGregorianDate: Identifiable {
   var date: GregorianDate
   let id = UUID()
-  
+
   var year: String {
     String(date.year)
   }
@@ -88,7 +88,7 @@ struct GregorianDateView: View {
                      displayedComponents: [.date])
           .datePickerStyle(.graphical)
           .environment(\.calendar, calendar)
-          
+
           List {
             LabeledContent("Gregorian") {
               Text("\(gregorianDate.description)")
@@ -108,7 +108,7 @@ struct GregorianDateView: View {
           }
         }
       }
-      
+
       GroupBox(label: Label("Gregorian Easter", systemImage: "calendar.badge.clock")) {
         Table(easterRows, selection: $tableSelection) {
           TableColumn("Year", value: \.year)
@@ -121,11 +121,11 @@ struct GregorianDateView: View {
           let selectedItems = easterRows.filter { item in
             return tableSelection.contains(item.id)
           }
-          
+
           for item in selectedItems {
             items.append(NSItemProvider(object: "\(item.date)" as NSString))
           }
-          
+
           return items
         }
       }
