@@ -47,3 +47,12 @@ jobs:
         with:
           name: CelMekViewerApp
           path: 'build/Build/Products/Release/CelMek\ Viewer.app'
+      - name: Upload Release Asset
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: 'build/Build/Products/Release/CelMek\ Viewer.app'
+          asset_name: CelMek-Viewer
+          tag: latest
+          overwrite: true
+          body: "Latest build of CelMek Viewer.app"
