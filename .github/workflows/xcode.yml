@@ -1,0 +1,15 @@
+name: xcode
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  macos:
+    runs-on: macOS-13
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build
+      run: xcodebuild -project CelMek\ Viewer.xcodeproj -scheme 'CelMek Viewer'
