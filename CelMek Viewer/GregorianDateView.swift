@@ -45,7 +45,8 @@ func getGregorianEasterDates() -> [IdentifiableGregorianDate] {
 
 struct GregorianDateView: View {
   @State private var date = Date()
-  
+  private let easterRows = getGregorianEasterDates()
+  @State private var tableSelection = Set<IdentifiableGregorianDate.ID>()
   let calendar = Calendar(identifier: .gregorian)
   var year : Int  {
     get {
@@ -109,10 +110,23 @@ struct GregorianDateView: View {
       }
       
       GroupBox(label: Label("Gregorian Easter", systemImage: "calendar.badge.clock")) {
-        Table(getGregorianEasterDates()) {
+        Table(easterRows, selection: $tableSelection) {
           TableColumn("Year", value: \.year)
           TableColumn("Month", value: \.month)
           TableColumn("Day", value: \.day)
+        }
+        .focusable()
+        .onCopyCommand {
+          var items = [NSItemProvider]()
+          let selectedItems = easterRows.filter { item in
+            return tableSelection.contains(item.id)
+          }
+          
+          for item in selectedItems {
+            items.append(NSItemProvider(object: "\(item.date)" as NSString))
+          }
+          
+          return items
         }
       }
     }

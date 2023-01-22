@@ -64,6 +64,8 @@ func currentJulianDate() -> Foundation.Date
 
 struct JulianDateView: View {
   @State private var date = currentJulianDate()
+  private let easterRows = getJulianEasterDates()
+  @State private var tableSelection = Set<IdentifiableJulianDate.ID>()
   
   let calendar = Calendar(identifier: .gregorian)
   var year : Int  {
@@ -127,10 +129,23 @@ struct JulianDateView: View {
         }
       }
       GroupBox(label: Label("Julian Easter", systemImage: "calendar.badge.clock")) {
-        Table(getJulianEasterDates()) {
+        Table(easterRows, selection: $tableSelection) {
           TableColumn("Year", value: \.year)
           TableColumn("Month", value: \.month)
           TableColumn("Day", value: \.day)
+        }
+        .focusable()
+        .onCopyCommand {
+          var items = [NSItemProvider]()
+          let selectedItems = easterRows.filter { item in
+            return tableSelection.contains(item.id)
+          }
+          
+          for item in selectedItems {
+            items.append(NSItemProvider(object: "\(item.date)" as NSString))
+          }
+          
+          return items
         }
       }
     }
