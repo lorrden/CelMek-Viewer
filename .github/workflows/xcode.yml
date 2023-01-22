@@ -43,7 +43,7 @@ jobs:
       - name: Build
         run: |
           xcodebuild -project CelMek\ Viewer.xcodeproj -scheme 'CelMek Viewer' -config Release -derivedDataPath build
-          zip 'CelMek Viewer.zip' build/Build/Products/Release/CelMek\ Viewer.app'
+          zip 'CelMek Viewer.zip' build/Build/Products/Release/CelMek\ Viewer.app
       - name: Archive Binary
         uses: actions/upload-artifact@v3
         with:
