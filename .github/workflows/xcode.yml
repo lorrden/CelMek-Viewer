@@ -40,5 +40,5 @@ jobs:
           # apply provisioning profile
           # mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
           # cp $PP_PATH ~/Library/MobileDevice/Provisioning\ Profiles
-    - name: Build
-      run: xcodebuild -project CelMek\ Viewer.xcodeproj -scheme 'CelMek Viewer'
+      - name: Build
+        run: xcodebuild -project CelMek\ Viewer.xcodeproj -scheme 'CelMek Viewer'
