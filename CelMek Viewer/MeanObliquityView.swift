@@ -54,29 +54,36 @@ fileprivate func makePoints() -> [[Obliquity]] {
 struct MeanObliquityView: View {
   var body: some View {
     VStack {
-      Chart {
-        ForEach(makePoints()[0], id: \.centuries) {item in
-          LineMark(
-            x: .value("Centuries", item.centuries),
-            y: .value("𝜀₀", item.e0),
-            series: .value("T", "𝜀₀")
-          )
-        }.foregroundStyle(.blue)
+      GroupBox(label: Label("Fast Method", systemImage: "function")) {
+        Chart {
+          ForEach(makePoints()[0], id: \.centuries) {item in
+            LineMark(
+              x: .value("Centuries", item.centuries),
+              y: .value("𝜀₀", item.e0),
+              series: .value("T", "𝜀₀")
+            )
+          }.foregroundStyle(.blue)
+        }
+        .chartXScale(domain: -115...115)
+        .chartYScale(domain: 22...25)
+        .chartXAxisLabel("Centuries since the year 2000")
+        .chartYAxisLabel("𝜀₀")
       }
-      .chartXScale(domain: -115...115)
-      .chartYScale(domain: 22...25)
-
-      Chart {
-        ForEach(makePoints()[1], id: \.centuries) {item in
-          LineMark(
-            x: .value("Centuries", item.centuries),
-            y: .value("𝜀₀", item.e0),
-            series: .value("T", "𝜀₀")
-          )
-        }.foregroundStyle(.red)
+      GroupBox(label: Label("Accurate Method", systemImage: "function")) {
+        Chart {
+          ForEach(makePoints()[1], id: \.centuries) {item in
+            LineMark(
+              x: .value("Centuries", item.centuries),
+              y: .value("𝜀₀", item.e0),
+              series: .value("T", "𝜀₀")
+            )
+          }.foregroundStyle(.red)
+        }
+        .chartXScale(domain: -115...115)
+        .chartYScale(domain: 22...25)
+        .chartXAxisLabel("Centuries since the year 2000")
+        .chartYAxisLabel("𝜀₀")
       }
-      .chartXScale(domain: -115...115)
-      .chartYScale(domain: 22...25)
     }
   }
 }
