@@ -1,0 +1,88 @@
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+// Copyright 2023 Mattias Holm
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+// http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+
+
+import SwiftUI
+import Charts
+import CelMek
+
+
+struct Obliquity {
+  var centuries: Double
+  var e0: Double
+}
+
+fileprivate func makePoints() -> [[Obliquity]] {
+  let startDate = -110
+  var fastObliquityValues : [Obliquity] = []
+  var accurateObliquityValues : [Obliquity] = []
+  for i in 0...220 {
+    let century = Double(startDate) + Double(i)
+    let fastE0 = CelMek.fastMeanObliquityOfTheEcliptic(
+      jd: JulianDate(year: -9000 + i * 100,
+                     month: .January,
+                     day: 1).toJD()).asDeg
+    let accurateE0 = CelMek.meanObliquityOfTheEcliptic(
+      jd: JulianDate(year: -9000 + i * 100,
+                     month: .January,
+                     day: 1).toJD()).asDeg
+    fastObliquityValues.append(
+      Obliquity(centuries: century,
+                e0: fastE0))
+    accurateObliquityValues.append(
+      Obliquity(centuries: century,
+                e0: accurateE0))
+  }
+  return [fastObliquityValues, accurateObliquityValues]
+}
+
+struct MeanObliquityView: View {
+  var body: some View {
+    VStack {
+      Chart {
+        ForEach(makePoints()[0], id: \.centuries) {item in
+          LineMark(
+            x: .value("Centuries", item.centuries),
+            y: .value("𝜀₀", item.e0),
+            series: .value("T", "𝜀₀")
+          )
+        }.foregroundStyle(.blue)
+      }
+      .chartXScale(domain: -115...115)
+      .chartYScale(domain: 22...25)
+
+      Chart {
+        ForEach(makePoints()[1], id: \.centuries) {item in
+          LineMark(
+            x: .value("Centuries", item.centuries),
+            y: .value("𝜀₀", item.e0),
+            series: .value("T", "𝜀₀")
+          )
+        }.foregroundStyle(.red)
+      }
+      .chartXScale(domain: -115...115)
+      .chartYScale(domain: 22...25)
+    }
+  }
+}
+
+struct MeanObliquityView_Previews: PreviewProvider {
+  static var previews: some View {
+    MeanObliquityView()
+  }
+}

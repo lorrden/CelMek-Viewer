@@ -23,6 +23,7 @@
 		EC6FAF35297524D50099893C /* CelMek in Frameworks */ = {isa = PBXBuildFile; productRef = EC6FAF34297524D50099893C /* CelMek */; };
 		EC6FAF372975C9D80099893C /* DeltaTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6FAF362975C9D80099893C /* DeltaTView.swift */; };
 		EC6FAF392975CC6D0099893C /* README.adoc in Resources */ = {isa = PBXBuildFile; fileRef = EC6FAF382975CC6D0099893C /* README.adoc */; };
+		ECE828AF298308A6008530FB /* MeanObliquityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE828AE298308A6008530FB /* MeanObliquityView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		EC6FAF262975211D0099893C /* CelMek_ViewerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelMek_ViewerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EC6FAF362975C9D80099893C /* DeltaTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeltaTView.swift; sourceTree = "<group>"; };
 		EC6FAF382975CC6D0099893C /* README.adoc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.adoc; sourceTree = "<group>"; };
+		ECE828AE298308A6008530FB /* MeanObliquityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeanObliquityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				EC6FAF112975211D0099893C /* CelMek_Viewer.entitlements */,
 				EC6FAF0E2975211D0099893C /* Preview Content */,
 				EC6FAF362975C9D80099893C /* DeltaTView.swift */,
+				ECE828AE298308A6008530FB /* MeanObliquityView.swift */,
 				EC16A465297671CC00769882 /* JewishDateView.swift */,
 				EC16A4672977171900769882 /* MoslemDateView.swift */,
 				EC6255D72979DF0600E164D0 /* GregorianDateView.swift */,
@@ -292,6 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECE828AF298308A6008530FB /* MeanObliquityView.swift in Sources */,
 				EC6FAF0B2975211C0099893C /* ContentView.swift in Sources */,
 				EC6FAF092975211C0099893C /* CelMek_ViewerApp.swift in Sources */,
 				EC6255DC297A67E100E164D0 /* CurrentDateView.swift in Sources */,

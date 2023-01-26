@@ -30,7 +30,8 @@ private var listItems = [
   ListItem(file: "calendar", name: "Jewish Dates"),
   ListItem(file: "calendar", name: "Julian Dates"),
   ListItem(file: "calendar", name: "Gregorian Dates"),
-  ListItem(file: "calendar", name: "Current Date")
+  ListItem(file: "calendar", name: "Current Date"),
+  ListItem(file: "function", name: "Mean Obliquity"),
 ]
 
 struct ContentView: View {
@@ -77,6 +78,11 @@ struct ContentView: View {
                    minHeight: 400,
                    maxHeight: .infinity).padding()
         }
+      case listItems[6].id:
+        MeanObliquityView().frame(minWidth: 400,
+                                  maxWidth: .infinity,
+                                  minHeight: 400,
+                                  maxHeight: .infinity).padding()
       default:
         Text("Bad view").frame(minWidth: 400,
                                maxWidth: .infinity,
