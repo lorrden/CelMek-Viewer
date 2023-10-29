@@ -60,8 +60,7 @@ struct MeanObliquityView: View {
         Chart(points[0]) {
           LineMark(
             x: .value("Centuries", $0.centuries),
-            y: .value("𝜀₀", $0.e0),
-            series: .value("T", "𝜀₀")
+            y: .value("𝜀₀", $0.e0)
           ).foregroundStyle(.blue)
         }
         .chartXScale(domain: -115...115)
@@ -73,8 +72,7 @@ struct MeanObliquityView: View {
         Chart(points[1]) {
           LineMark(
             x: .value("Centuries", $0.centuries),
-            y: .value("𝜀₀", $0.e0),
-            series: .value("T", "𝜀₀")
+            y: .value("𝜀₀", $0.e0)
           )
         }.foregroundStyle(.red)
         .chartXScale(domain: -115...115)

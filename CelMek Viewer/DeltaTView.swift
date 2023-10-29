@@ -55,8 +55,7 @@ struct DeltaTView: View {
     Chart(points) {
       LineMark(
         x: .value("Date", $0.date),
-        y: .value("DT", $0.dt),
-        series: .value("date", "dt")
+        y: .value("DT", $0.dt)
       )
       .foregroundStyle(.blue)
     }.padding()
@@ -69,3 +68,4 @@ struct DeltaTView_Previews: PreviewProvider {
     DeltaTView()
   }
 }
+
