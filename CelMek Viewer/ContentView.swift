@@ -32,6 +32,8 @@ private var listItems = [
   ListItem(file: "calendar", name: "Gregorian Dates"),
   ListItem(file: "calendar", name: "Current Date"),
   ListItem(file: "function", name: "Mean Obliquity"),
+  ListItem(file: "function", name: "Airfoil"),
+
 ]
 
 struct ContentView: View {
@@ -80,6 +82,11 @@ struct ContentView: View {
         }
       case listItems[6].id:
         MeanObliquityView().frame(minWidth: 400,
+                                  maxWidth: .infinity,
+                                  minHeight: 400,
+                                  maxHeight: .infinity).padding()
+      case listItems[7].id:
+        AirfoilView().frame(minWidth: 400,
                                   maxWidth: .infinity,
                                   minHeight: 400,
                                   maxHeight: .infinity).padding()

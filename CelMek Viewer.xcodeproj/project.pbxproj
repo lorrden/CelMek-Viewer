@@ -10,6 +10,7 @@
 		EC16A466297671CC00769882 /* JewishDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC16A465297671CC00769882 /* JewishDateView.swift */; };
 		EC16A4682977171900769882 /* MoslemDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC16A4672977171900769882 /* MoslemDateView.swift */; };
 		EC16A46A297718A500769882 /* SourceListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC16A469297718A500769882 /* SourceListRow.swift */; };
+		EC2E41242AEE617F000194B1 /* AirfoilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2E41232AEE617F000194B1 /* AirfoilView.swift */; };
 		EC6255D82979DF0600E164D0 /* GregorianDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6255D72979DF0600E164D0 /* GregorianDateView.swift */; };
 		EC6255DA2979E01E00E164D0 /* JulianDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6255D92979E01E00E164D0 /* JulianDateView.swift */; };
 		EC6255DC297A67E100E164D0 /* CurrentDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6255DB297A67E100E164D0 /* CurrentDateView.swift */; };
@@ -47,6 +48,7 @@
 		EC16A465297671CC00769882 /* JewishDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JewishDateView.swift; sourceTree = "<group>"; };
 		EC16A4672977171900769882 /* MoslemDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoslemDateView.swift; sourceTree = "<group>"; };
 		EC16A469297718A500769882 /* SourceListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceListRow.swift; sourceTree = "<group>"; };
+		EC2E41232AEE617F000194B1 /* AirfoilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirfoilView.swift; sourceTree = "<group>"; };
 		EC6255D72979DF0600E164D0 /* GregorianDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GregorianDateView.swift; sourceTree = "<group>"; };
 		EC6255D92979E01E00E164D0 /* JulianDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JulianDateView.swift; sourceTree = "<group>"; };
 		EC6255DB297A67E100E164D0 /* CurrentDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDateView.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				EC6255D72979DF0600E164D0 /* GregorianDateView.swift */,
 				EC6255D92979E01E00E164D0 /* JulianDateView.swift */,
 				EC6255DB297A67E100E164D0 /* CurrentDateView.swift */,
+				EC2E41232AEE617F000194B1 /* AirfoilView.swift */,
 			);
 			path = "CelMek Viewer";
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				EC6FAF0B2975211C0099893C /* ContentView.swift in Sources */,
 				EC6FAF092975211C0099893C /* CelMek_ViewerApp.swift in Sources */,
 				EC6255DC297A67E100E164D0 /* CurrentDateView.swift in Sources */,
+				EC2E41242AEE617F000194B1 /* AirfoilView.swift in Sources */,
 				EC16A4682977171900769882 /* MoslemDateView.swift in Sources */,
 				EC6255DA2979E01E00E164D0 /* JulianDateView.swift in Sources */,
 				EC16A466297671CC00769882 /* JewishDateView.swift in Sources */,
