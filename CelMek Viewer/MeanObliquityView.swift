@@ -22,7 +22,8 @@ import Charts
 import CelMek
 
 
-struct Obliquity {
+struct Obliquity : Identifiable {
+  let id: UUID = UUID()
   var centuries: Double
   var e0: Double
 }
@@ -54,15 +55,14 @@ fileprivate func makePoints() -> [[Obliquity]] {
 struct MeanObliquityView: View {
   var body: some View {
     VStack {
+      let points = makePoints()
       GroupBox(label: Label("Fast Method", systemImage: "function")) {
-        Chart {
-          ForEach(makePoints()[0], id: \.centuries) {item in
-            LineMark(
-              x: .value("Centuries", item.centuries),
-              y: .value("𝜀₀", item.e0),
-              series: .value("T", "𝜀₀")
-            )
-          }.foregroundStyle(.blue)
+        Chart(points[0]) {
+          LineMark(
+            x: .value("Centuries", $0.centuries),
+            y: .value("𝜀₀", $0.e0),
+            series: .value("T", "𝜀₀")
+          ).foregroundStyle(.blue)
         }
         .chartXScale(domain: -115...115)
         .chartYScale(domain: 22...25)
@@ -70,15 +70,13 @@ struct MeanObliquityView: View {
         .chartYAxisLabel("𝜀₀")
       }
       GroupBox(label: Label("Accurate Method", systemImage: "function")) {
-        Chart {
-          ForEach(makePoints()[1], id: \.centuries) {item in
-            LineMark(
-              x: .value("Centuries", item.centuries),
-              y: .value("𝜀₀", item.e0),
-              series: .value("T", "𝜀₀")
-            )
-          }.foregroundStyle(.red)
-        }
+        Chart(points[1]) {
+          LineMark(
+            x: .value("Centuries", $0.centuries),
+            y: .value("𝜀₀", $0.e0),
+            series: .value("T", "𝜀₀")
+          )
+        }.foregroundStyle(.red)
         .chartXScale(domain: -115...115)
         .chartYScale(domain: 22...25)
         .chartXAxisLabel("Centuries since the year 2000")

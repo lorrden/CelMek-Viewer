@@ -22,7 +22,8 @@ import Charts
 import CelMek
 
 
-struct DeltaTValue {
+struct DeltaTValue : Identifiable {
+  let id: UUID = UUID()
   var date: Foundation.Date
   var dt: Double
 }
@@ -50,15 +51,14 @@ func makeDeltaTPoints() -> [DeltaTValue] {
 
 struct DeltaTView: View {
   var body: some View {
-    Chart {
-      ForEach(makeDeltaTPoints(), id: \.date) { item in
-        LineMark(
-          x: .value("Date", item.date),
-          y: .value("DT", item.dt),
-          series: .value("DT", "A")
-        )
-        .foregroundStyle(.blue)
-      }
+    let points = makeDeltaTPoints()
+    Chart(points) {
+      LineMark(
+        x: .value("Date", $0.date),
+        y: .value("DT", $0.dt),
+        series: .value("date", "dt")
+      )
+      .foregroundStyle(.blue)
     }.padding()
   }
 }
