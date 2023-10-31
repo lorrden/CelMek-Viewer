@@ -33,7 +33,7 @@ private var listItems = [
   ListItem(file: "calendar", name: "Current Date"),
   ListItem(file: "function", name: "Mean Obliquity"),
   ListItem(file: "function", name: "Airfoil"),
-
+  ListItem(file: "function", name: "Atmosphere"),
 ]
 
 struct ContentView: View {
@@ -90,6 +90,12 @@ struct ContentView: View {
                                   maxWidth: .infinity,
                                   minHeight: 400,
                                   maxHeight: .infinity).padding()
+      case listItems[8].id:
+        AtmosphereView().frame(minWidth: 400,
+                               maxWidth: .infinity,
+                               minHeight: 400,
+                               maxHeight: .infinity).padding()
+
       default:
         Text("Bad view").frame(minWidth: 400,
                                maxWidth: .infinity,
