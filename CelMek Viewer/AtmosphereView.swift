@@ -25,9 +25,10 @@ struct AtmospherePoint: Identifiable {
   let id: UUID = UUID()
   var elevation: Double
   var temperature: Double
+  var pressure: Double
+  var density: Double
+  var dynamicViscosity: Double
 }
-
-
 
 func computeAtmosphere(atmosphere: Atmosphere) -> [AtmospherePoint] {
 
@@ -35,8 +36,14 @@ func computeAtmosphere(atmosphere: Atmosphere) -> [AtmospherePoint] {
 
   for i in 0 ... 500 {
     let temp = atmosphere.temperature(at: Double(i) * 100.0)
+    let pressure = atmosphere.pressure(at: Double(i) * 100.0)
+    let density = atmosphere.density(at: Double(i) * 100.0)
+    let dynViscosity = atmosphere.dynamicViscosity(at: Double(i) * 100.0)
     coords.append(AtmospherePoint(elevation: Double(i) * 100.0,
-                                  temperature: temp))
+                                  temperature: temp,
+                                  pressure: pressure,
+                                  density: density,
+                                  dynamicViscosity: dynViscosity))
   }
 
   return coords
@@ -48,7 +55,7 @@ struct AtmosphereView: View {
 
     let atm = EarthAtmosphere()
     let atmCoords = computeAtmosphere(atmosphere: atm)
-
+    HStack {
       Chart(atmCoords) {
         LineMark(
           x: .value("temperature", $0.temperature),
@@ -57,9 +64,47 @@ struct AtmosphereView: View {
         ).foregroundStyle(.blue)
 
       }
-      .chartXScale(domain: -200...200)
+      //.chartXScale(domain: -200...200)
       .chartYScale(domain: 0...50000)
-      .chartYAxisLabel("Elevation")
+      .chartYAxisLabel("Elevation (m)")
+      .chartXAxisLabel("Temperature (℃)")
+
+      Chart(atmCoords) {
+        LineMark(
+          x: .value("pressure", $0.pressure),
+          y: .value("elevation", $0.elevation),
+          series: .value("pressure", "elevation")
+        ).foregroundStyle(.red)
+      }
+      //.chartXScale(domain: -200...200)
+      .chartYScale(domain: 0...50000)
+      .chartYAxisLabel("Elevation (m)")
+      .chartXAxisLabel("Pressure (kPa)")
+
+      Chart(atmCoords) {
+        LineMark(
+          x: .value("density", $0.density),
+          y: .value("elevation", $0.elevation),
+          series: .value("density", "elevation")
+        ).foregroundStyle(.green)
+      }
+      //.chartXScale(domain: -200...200)
+      .chartYScale(domain: 0...50000)
+      .chartYAxisLabel("Elevation (m)")
+      .chartXAxisLabel("Density (kg/㎥)")
+
+      Chart(atmCoords) {
+        LineMark(
+          x: .value("dynamicViscosity", $0.dynamicViscosity),
+          y: .value("elevation", $0.elevation),
+          series: .value("viscosity", "elevation")
+        ).foregroundStyle(.yellow)
+      }
+      //.chartXScale(domain: -200...200)
+      .chartYScale(domain: 0...50000)
+      .chartYAxisLabel("Elevation (m)")
+      .chartXAxisLabel("Dynamic Viscosity ((10⁻⁵ N s/m²))")
+    }
   }
 }
 
