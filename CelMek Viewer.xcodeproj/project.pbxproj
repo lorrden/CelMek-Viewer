@@ -15,6 +15,7 @@
 		EC6255D82979DF0600E164D0 /* GregorianDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6255D72979DF0600E164D0 /* GregorianDateView.swift */; };
 		EC6255DA2979E01E00E164D0 /* JulianDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6255D92979E01E00E164D0 /* JulianDateView.swift */; };
 		EC6255DC297A67E100E164D0 /* CurrentDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6255DB297A67E100E164D0 /* CurrentDateView.swift */; };
+		EC69CA462B04914E00585215 /* Physics in Frameworks */ = {isa = PBXBuildFile; productRef = EC69CA452B04914E00585215 /* Physics */; };
 		EC6FAF092975211C0099893C /* CelMek_ViewerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6FAF082975211C0099893C /* CelMek_ViewerApp.swift */; };
 		EC6FAF0B2975211C0099893C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6FAF0A2975211C0099893C /* ContentView.swift */; };
 		EC6FAF0D2975211D0099893C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC6FAF0C2975211D0099893C /* Assets.xcassets */; };
@@ -22,7 +23,6 @@
 		EC6FAF1B2975211D0099893C /* CelMek_ViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6FAF1A2975211D0099893C /* CelMek_ViewerTests.swift */; };
 		EC6FAF252975211D0099893C /* CelMek_ViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6FAF242975211D0099893C /* CelMek_ViewerUITests.swift */; };
 		EC6FAF272975211D0099893C /* CelMek_ViewerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6FAF262975211D0099893C /* CelMek_ViewerUITestsLaunchTests.swift */; };
-		EC6FAF35297524D50099893C /* CelMek in Frameworks */ = {isa = PBXBuildFile; productRef = EC6FAF34297524D50099893C /* CelMek */; };
 		EC6FAF372975C9D80099893C /* DeltaTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6FAF362975C9D80099893C /* DeltaTView.swift */; };
 		EC6FAF392975CC6D0099893C /* README.adoc in Resources */ = {isa = PBXBuildFile; fileRef = EC6FAF382975CC6D0099893C /* README.adoc */; };
 		ECE828AF298308A6008530FB /* MeanObliquityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE828AE298308A6008530FB /* MeanObliquityView.swift */; };
@@ -75,7 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC6FAF35297524D50099893C /* CelMek in Frameworks */,
+				EC69CA462B04914E00585215 /* Physics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +96,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC69CA3E2B04150B00585215 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EC6FAEFC2975211C0099893C = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +111,7 @@
 				EC6FAF192975211D0099893C /* CelMek ViewerTests */,
 				EC6FAF232975211D0099893C /* CelMek ViewerUITests */,
 				EC6FAF062975211C0099893C /* Products */,
+				EC69CA3E2B04150B00585215 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -181,7 +189,7 @@
 			);
 			name = "CelMek Viewer";
 			packageProductDependencies = (
-				EC6FAF34297524D50099893C /* CelMek */,
+				EC69CA452B04914E00585215 /* Physics */,
 			);
 			productName = "CelMek Viewer";
 			productReference = EC6FAF052975211C0099893C /* CelMek Viewer.app */;
@@ -231,7 +239,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					EC6FAF042975211C0099893C = {
 						CreatedOnToolsVersion = 14.2;
@@ -256,7 +264,7 @@
 			);
 			mainGroup = EC6FAEFC2975211C0099893C;
 			packageReferences = (
-				EC6FAF33297524D50099893C /* XCRemoteSwiftPackageReference "swift-celmek" */,
+				EC69CA442B04914E00585215 /* XCRemoteSwiftPackageReference "swift-physics" */,
 			);
 			productRefGroup = EC6FAF062975211C0099893C /* Products */;
 			projectDirPath = "";
@@ -382,9 +390,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -442,9 +452,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -471,6 +483,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"CelMek Viewer/Preview Content\"";
 				DEVELOPMENT_TEAM = UZ3L4HCTN8;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -498,6 +511,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"CelMek Viewer/Preview Content\"";
 				DEVELOPMENT_TEAM = UZ3L4HCTN8;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -523,6 +537,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = UZ3L4HCTN8;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
@@ -542,6 +557,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = UZ3L4HCTN8;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
@@ -560,6 +576,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = UZ3L4HCTN8;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -577,6 +594,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = UZ3L4HCTN8;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -630,9 +648,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		EC6FAF33297524D50099893C /* XCRemoteSwiftPackageReference "swift-celmek" */ = {
+		EC69CA442B04914E00585215 /* XCRemoteSwiftPackageReference "swift-physics" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/lorrden/swift-celmek";
+			repositoryURL = "https://github.com/openorbit/swift-physics.git";
 			requirement = {
 				branch = main;
 				kind = branch;
@@ -641,10 +659,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		EC6FAF34297524D50099893C /* CelMek */ = {
+		EC69CA452B04914E00585215 /* Physics */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = EC6FAF33297524D50099893C /* XCRemoteSwiftPackageReference "swift-celmek" */;
-			productName = CelMek;
+			package = EC69CA442B04914E00585215 /* XCRemoteSwiftPackageReference "swift-physics" */;
+			productName = Physics;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
