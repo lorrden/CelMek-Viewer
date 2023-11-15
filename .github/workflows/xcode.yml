@@ -42,7 +42,7 @@ jobs:
           # cp $PP_PATH ~/Library/MobileDevice/Provisioning\ Profiles
       - name: Build
         run: |
-          xcode-select -s /Applications/Xcode_15.0.app
+          sudo xcode-select -s /Applications/Xcode_15.0.app
           xcodebuild -project CelMek\ Viewer.xcodeproj -scheme 'CelMek Viewer' -config Release -derivedDataPath build
           mv "build/Build/Products/Release/CelMek Viewer.app" "CelMek Viewer.app"
           zip -r CelMek-Viewer.zip "CelMek Viewer.app"
